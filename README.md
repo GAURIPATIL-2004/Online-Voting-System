@@ -79,4 +79,4 @@ To run the project locally:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/GAURIPATIL-2004/Online Voting System.git
+   git clone https://github.com/GAURIPATIL-2004/Online-Voting-System.git
