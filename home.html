@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 1000px;
+            background-color: #fff;
+            color: #333;
+        }
+        .rules, .welcome {
+            width: 45%;
+        }
+        .rules h2, .welcome h1, .age-description h2 {
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .rules ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .rules li {
+            margin-bottom: 15px;
+            color: #555;
+            background: #f2f2f2;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .rules li::before {
+            content: '✔';
+            color: #4e54c8;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .age-description {
+            margin-top: 20px;
+        }
+        .age-description p {
+            color: #555;
+            background: #f2f2f2;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .welcome {
+            text-align: center;
+        }
+        .welcome button {
+            padding: 15px 30px;
+            background-color: #4e54c8;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .welcome button:hover {
+            background-color: #3b3b98;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rules">
+            <h2>Voting Rules</h2>
+            <ul>
+                <li>Every voter must register before voting.</li>
+                <li>Each voter can vote only once.</li>
+                <li>Votes are confidential and cannot be shared.</li>
+                <li>Follow the instructions carefully while voting.</li>
+                <li>In case of any issue, contact the support team.</li>
+            </ul>
+            <div class="age-description">
+                <h2>Age Requirement</h2>
+                <p>Voters must be at least 18 years old to participate in the voting process.</p>
+            </div>
+        </div>
+        <div class="welcome">
+            <br><br><br> <br><br><br> <br><br><br> <br><br>
+            <h1>Welcome to the Online Voting System</h1>
+            <button onclick="window.location.href='index.html'">Start Voting</button>
+        </div>
+    </div>
+</body>
+</html>

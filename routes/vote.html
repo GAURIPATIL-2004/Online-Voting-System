@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote</title>
+</head>
+<body>
+    <h1>Vote for Your Candidate</h1>
+    <form action="api/vote.php" method="post">
+        <label for="candidate">Select Candidate:</label>
+        <select name="candidate_id" id="candidate">
+            <!-- Populate this with candidate options from the database -->
+            <?php
+            include("connect.php");
+            $result = $connect->query("SELECT id, name FROM user WHERE role = 2");
+            while ($row = $result->fetch_assoc()) {
+                echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
+            }
+            ?>
+        </select>
+        <br><br>
+        <button type="submit" name="vote">Vote</button>
+    </form>
+</body>
+</html>

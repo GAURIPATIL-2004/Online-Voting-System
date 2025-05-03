@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+        }
+        h1 {
+            margin-bottom: 24px;
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        input[type="text"], input[type="password"], input[type="number"], textarea, select, input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #fafafa;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, textarea:focus, select:focus, input[type="file"]:focus {
+            outline: none;
+            border-color: #0056b3;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0056b3;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #004494;
+            transform: scale(1.03);
+        }
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0056b3;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="mobile" placeholder="Enter Mobile Number" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="password" name="cpassword" placeholder="Confirm Password" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <select name="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select>
+            <input type="file" name="photo" accept="image/*" required>
+            <button type="submit">Register</button>
+        </form>
+        <a href="../login.html" class="login-link">Already have an account? Login</a>
+    </div>
+</body>
+</html>

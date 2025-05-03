@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Viewer and Admin Section</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .admin-section {
+            display: flex;
+            align-items: center;
+        }
+        .admin-image {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid #e9ecef;
+        }
+        .admin-section a {
+            color: #fff;
+            background-color: #007bff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .admin-section a:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 30px;
+            background-color: #ffffff;
+            position: relative;
+        }
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #343a40;
+            text-align: center;
+        }
+        .file-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .file-box {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .file-box img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin: 20px auto;
+        }
+        .file-box p {
+            font-size: 1rem;
+            color: #007bff;
+            margin: 10px 0;
+        }
+        .file-box:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="admin-section">
+            <img src="admin.jpg" alt="Admin Image" class="admin-image">
+            <a href="http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=voting&table=user" target="_blank">Admin Panel</a>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>Dash</h1>
+        <div class="file-boxes">
+            <div class="file-box" data-file="home.html">
+                <a href="home.html" target="_blank">
+                    <img src="icons/home.jpg" alt="Home">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="file-box" data-file="login.html">
+                <a href="login.html" target="_blank">
+                    <img src="icons/login.png" alt="Login">
+                    <p>Login</p>
+                </a>
+            </div>
+            <div class="file-box" data-file="routes/register.html">
+                <a href="routes/register.html" target="_blank">
+                    <img src="icons/register.png" alt="Register">
+                    <p>Register</p>
+                </a>
+            </div>
+            <div class="file-box" data-file="routes/dashboard.php">
+                <a href="routes/dashboard.php" target="_blank">
+                    <img src="icons/dashboard.jpg" alt="Dashboard">
+                    <p>Dashboard</p>
+                </a>
+            </div>
+            <div class="file-box" data-file="routes/results.php">
+                <a href="routes/results.php" target="_blank">
+                    <img src="icons/results.png" alt="Results">
+                    <p>Results</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
